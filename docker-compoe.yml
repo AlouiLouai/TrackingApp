@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  questdb:
+    container_name: questdb/questdb
+    ports:
+      - '9000:9000'
+  api:
+    build: ./server
+    container_name: api_backend
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./server:/app
+      - ./app/node_modules
+    depends_on:
+        questdb/questdb
+  client:
+    build: ./client
+    container_name: client_frontend
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./client:/app
+      - ./app/node_modules
+    depends_on:
+      - api_backend
+    stdin_open: true
+    tty: true

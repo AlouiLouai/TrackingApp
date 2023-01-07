@@ -12,3 +12,8 @@
 - I can copy schema from keyboard ( questDb interface ) but I can't execute 3 SQL statement that are linked :
    -> Intances should be a table linked to the big table ( that have Instances ) 
    -> + the INNER JOIN third statement 
+
+
+# Start the project : 
+- npm i to install all used packages
+- npm start to run the local nodemon server
