@@ -5,5 +5,5 @@
 - I succed to get from large json to csv file + I succed to import large csv by enabling COPY of questdb terminal 
 - But the problem is that where I copy to keyboard the data form : I need to work with INNER JOIN , but the interface won't allow me to exec two SQL statments . 
 
-- That was really interesting technical task ? Thanks for letting me the chance to try it ! 
+- That was really interesting technical task ! Thanks for letting me the chance to try it ! 
 - I can't continue because to be honest my laptop is pretty low config , so docker killed my machine haha 
