@@ -1,0 +1,9 @@
+- Implementing github actions in .github/workflow for both backend and frontend . 
+- webpack + babel to bundle the frontend with its loaders . 
+- dockerising the application + configuring docker for questdb
+- Because I can't get the data from backend , I saw that when time is enough I focused on component , I have dummy data to visualize
+- I succed to get from large json to csv file + I succed to import large csv by enabling COPY of questdb terminal 
+- But the problem is that where I copy to keyboard the data form : I need to work with INNER JOIN , but the interface won't allow me to exec two SQL statments . 
+
+- That was really interesting technical task ? Thanks for letting me the chance to try it ! 
+- I can't continue because to be honest my laptop is pretty low config , so docker killed my machine haha 
