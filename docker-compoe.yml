@@ -1,28 +1,33 @@
 version: '3.8'
 services:
   questdb:
-    container_name: questdb/questdb
     ports:
       - '9000:9000'
+    networks:
+      - infra
   api:
     build: ./server
-    container_name: api_backend
     ports:
       - '3000:3000'
     volumes:
       - ./server:/app
       - ./app/node_modules
     depends_on:
-        questdb/questdb
+        questdb
+    networks:
+      - infra
   client:
     build: ./client
-    container_name: client_frontend
     ports:
       - '8080:8080'
     volumes:
       - ./client:/app
       - ./app/node_modules
     depends_on:
-      - api_backend
-    stdin_open: true
-    tty: true
+      - api
+    networks:
+      - infra
+
+networks:
+  infra:
+  

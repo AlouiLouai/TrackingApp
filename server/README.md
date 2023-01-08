@@ -4,7 +4,7 @@
 
 ### Converting Too large JSON file to CSV thanks to gigasheet 
 
-#### importing the CSV following QuestDb rule
+#### manipualte the json file with script 'transofrm.js' instead of working with csv
 - by enabling the copy command 
 - making a directory within the questDb docker instance that have a temporary file which is the CSV
 - coying the file within the docker & and getting data already to my local instance 
@@ -13,7 +13,10 @@
    -> Intances should be a table linked to the big table ( that have Instances ) 
    -> + the INNER JOIN third statement 
 
+- The new script get the manipulated data from json file and persist them to database
+
 
 # Start the project : 
 - npm i to install all used packages
+- run transform.js to insert data to questdb
 - npm start to run the local nodemon server

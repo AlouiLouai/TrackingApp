@@ -1,7 +1,6 @@
 const express = require('express')
 const body_parser = require('body-parser')
 const cors = require('cors')
-const run = require('./config')
 require('dotenv').config
 const app = express()
 
@@ -17,7 +16,6 @@ app.use(cors(corsOptions));
 app.use(body_parser.urlencoded({ extended: true }))
 app.use(body_parser.json())
 
-run
 
 const port = process.env.PORT ? process.env.PORT : "3000";
 

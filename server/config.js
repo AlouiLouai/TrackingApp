@@ -4,6 +4,10 @@ const FormData = require("form-data");
 const fs = require("fs");
 const fetch = require("node-fetch");
 
+/**
+ * NOT USED FROM NOW 
+ * this way is only responsible for getting data from csv which is not what I am looking for
+ */
 async function run() {
     // create a sender with a 4k buffer
     const sender = new Sender({ bufferSize: 4096 });

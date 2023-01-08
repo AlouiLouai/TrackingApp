@@ -1,6 +1,5 @@
 ------------------------------------------ AWS SERVICES MAY BE USED ---------------------------------------------------
 
--  When takling csv's , we need a S3 bucket to store huge data on the cloud , not on our database !
-- AWS allow us to read and write to those csv files , that's why I strongly suggest AWS Glue to read and write from csv
 - We can use AWS DynamoDb as database
+- lampda function that read from json file and insert to database 
 - I have tried AWS amplify for content management that provide a whole full stack app , by having admin panel to control
