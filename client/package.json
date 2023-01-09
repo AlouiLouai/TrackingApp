@@ -10,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "core-js-compat": "^3.4.7",
+    "file-loader": "^6.2.0",
     "highcharts": "10.1.0",
     "highcharts-react-official": "3.1.0",
     "react": "^18.2.0",
@@ -19,8 +20,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack",
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode development",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

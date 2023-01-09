@@ -1,13 +1,25 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
-    entry: path.join(__dirname, "src", "index.js"),
+    entry: "./src/index.js",
     output: {
-        path: path.resolve(__dirname, "dist"),
+        filename: "main.js",
+        path: path.resolve(__dirname, "build"),
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, "public", "index.html"),
+        }),
+    ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "build"),
+        },
+        port: 8080,
     },
     module: {
+        // exclude node_modules
         rules: [
             {
                 test: /\.?js$/,
@@ -26,11 +38,10 @@ module.exports = {
                     'css-loader'
                 ]
             }
-        ]
+        ],
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, "public", "index.html"),
-        }),
-    ],
-}
+    // pass all js files through Babel
+    resolve: {
+        extensions: ["*", ".js", ".jsx"],
+    }
+};
